@@ -38,7 +38,6 @@ def request_wikipedia(query, language="en"):
             content = page["extract"]
             # Create a valid file name
             file_name = f"{clean_query(query)}.wiki"
-            
             # Write the content to the file
             with open(file_name, "w", encoding="utf-8") as file:
                 file.write(content)           
