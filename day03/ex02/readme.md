@@ -15,12 +15,11 @@ Before running the program, make sure you have the required libraries installed.
 
 python request_wikipedia.py <search_query>
 
-python request_wikipedia.py "chocolatine"
+python request_wikipedia.py "cacau"
 
 
-## Errors samples
+## Errors samples : no content
 
-  python request_wikipedia.py "chocolatine"
-  
-  cat chocolatine.wiki
+  python request_wikipedia.py "microsoft"
+
 ```
