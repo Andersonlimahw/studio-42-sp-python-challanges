@@ -8,6 +8,8 @@ This script sets up a virtual environment for Django development. It creates a v
 
 2. Create a `requirement.txt` file in the same directory as this script with the following content:
 
+2.1 if don't have installed install postGressSQL on <https://www.postgresql.org/download/windows/>
+
 3. Run the script `my_script.sh` as follows:
 
 ```bash
