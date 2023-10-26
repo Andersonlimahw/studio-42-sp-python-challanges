@@ -1,8 +1,6 @@
 import requests
 import sys
-import re
-import os
-
+import dewiki
 
 class bcolors:
     HEADER = '\033[95m'
@@ -31,7 +29,7 @@ def log_success(message):
 
 # Function to clean the search query to create a valid file name
 def clean_query(query):
-    return re.sub(r'\s+', '_', query)
+    return dewiki.from_string(query)
 
 # Function to request data from Wikipedia and write it to a file
 def request_wikipedia(query, language="en"):
