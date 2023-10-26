@@ -20,10 +20,14 @@ def log_info(message):
     print(f"{bcolors.OKBLUE}[Info]: {message} {bcolors.ENDC}")
 
 def log_warning(message):
-    print(f"{bcolors.WARNING}[Info]: {message} {bcolors.ENDC}")
+    print(f"{bcolors.WARNING}[Warning]: {message} {bcolors.ENDC}")
 
 def log_error(message):
-    print(f"{bcolors.WARNING}[Info]: {message} {bcolors.ENDC}")
+    print(f"{bcolors.FAIL}[Fail]: {message} {bcolors.ENDC}")
+
+
+def log_success(message):
+    print(f"{bcolors.OKGREEN}[Success]: {message} {bcolors.ENDC}")    
 
 # Function to clean the search query to create a valid file name
 def clean_query(query):
@@ -65,7 +69,7 @@ def request_wikipedia(query, language="en"):
             # Write the content to the file
             with open(file_name, "w", encoding="utf-8") as file:
                 file.write(content)           
-            log_info(f"Data written to {file_name}")
+            log_success(f"Data written to {file_name}")
         else:
             log_warning("No information found for the given query.")
     else:
